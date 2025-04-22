@@ -62,67 +62,7 @@ const MeliNavbar = () => {
             className="ms-auto align-items-center"
             style={{ fontSize: "0.9rem" }}
           >
-            <div className="d-flex align-items-center me-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                className="bi bi-geo-alt-fill me-1"
-                viewBox="0 0 16 16"
-              >
-                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
-              </svg>
-              <span>Envio</span>
-            </div>
-            <Nav.Link href="#categorias" className="me-2">
-              Categorías
-            </Nav.Link>
-            <Nav.Link href="#ofertas" className="me-2">
-              Ofertas
-            </Nav.Link>
-            <Nav.Link href="#cupones" className="me-2">
-              Cupones
-            </Nav.Link>
-            <Nav.Link href="#productos" className="me-2">
-              Productos
-            </Nav.Link>
-            <Nav.Link href="#moda" className="me-2">
-              Moda
-            </Nav.Link>
-            <Nav.Link href="#mercado-play" className="me-2">
-              Gorras
-            </Nav.Link>
-            <Nav.Link href="#vender" className="me-2">
-              Camisas
-            </Nav.Link>
-            <Nav.Link href="#ayuda" className="me-2">
-              Ayuda
-            </Nav.Link>
-            <Nav.Link href="#notificaciones" className="me-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="currentColor"
-                className="bi bi-bell-fill"
-                viewBox="0 0 16 16"
-              >
-                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7a5 5 0 0 0-6.005-4.901z" />
-              </svg>
-            </Nav.Link>
-            <Nav.Link href="#carrito">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="currentColor"
-                className="bi bi-cart-fill"
-                viewBox="0 0 16 16"
-              >
-                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.595 6.423A.5.5 0 0 1 14 9H2.166l-.81-3.243a.5.5 0 0 1-.037-.592V1.5a.5.5 0 0 1 .5-.5zM16 12a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-2 1a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-9-2a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-2 1a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" />
-              </svg>
-            </Nav.Link>
+            {/* ... el resto de tu navegación ... */}
           </Nav>
         </Navbar.Collapse>
       </Container>
