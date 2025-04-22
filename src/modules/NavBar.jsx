@@ -17,7 +17,7 @@ const MeliNavbar = () => {
     >
       <Container fluid className="px-md-4 d-flex flex-column">
         {/* Parte superior: Logo y Buscador */}
-        <div className="d-flex align-items-center mb-2">
+        <div className="d-flex align-items-center mb-2 w-100">
           <Navbar.Brand href="#" className="me-md-3">
             <img
               src="https://http2.mlstatic.com/D_NQ_NP_866208-MLA71784981947_092023-O.webp"
@@ -25,6 +25,7 @@ const MeliNavbar = () => {
               alt="Mercado Libre"
             />
           </Navbar.Brand>
+
           <Form className="d-flex flex-grow-1 me-md-2">
             <FormControl
               type="search"
@@ -53,18 +54,22 @@ const MeliNavbar = () => {
               </svg>
             </Button>
           </Form>
-          {/* Espacio para elementos adicionales en la parte superior derecha si los hubiera */}
         </div>
 
-        {/* Parte inferior: Navegación */}
-        <Navbar.Collapse id="basic-navbar-nav">
+        {/* Parte inferior: Categorías de navegación */}
+        <div className="w-100 border-top pt-2">
           <Nav
-            className="ms-auto align-items-center"
-            style={{ fontSize: "0.9rem" }}
+            className="justify-content-center gap-4 flex-wrap"
+            style={{ fontSize: "0.95rem", fontWeight: "500" }}
           >
-            {/* ... el resto de tu navegación ... */}
+            <Nav.Link href="#">Inicio</Nav.Link>
+            <Nav.Link href="#">Gorras</Nav.Link>
+            <Nav.Link href="#">Tecnología</Nav.Link>
+            <Nav.Link href="#">Electrodomésticos</Nav.Link>
+            <Nav.Link href="#">Ofertas</Nav.Link>
+            <Nav.Link href="#">Información</Nav.Link>
           </Nav>
-        </Navbar.Collapse>
+        </div>
       </Container>
     </Navbar>
   );
