@@ -1,43 +1,27 @@
 import React from "react";
+import gorra2 from "../../public/gorras/gorra2.jpg";
+import gorra3 from "../../public/gorras/gorra3.jpg";
+import gorra4 from "../../public/gorras/gorra4.jpg";
 
 const gorras = [
-  {
-    nombre: "Gorra Nike Negra",
-    precio: "$28.000",
-    envio: "¡Envío GRATIS!",
-    img: "../public/gorra1.jpg",
-  },
   {
     nombre: "Gorra Adidas Blanca",
     precio: "$28.000",
     envio: "¡Envío GRATIS!",
-    img: "../public/gorras/gorra2.jpg",
+    img: gorra2,
   },
   {
     nombre: "Gorra Puma Azul",
     precio: "$80.000",
     envio: "¡Envío GRATIS!",
-    img: "../public/gorras/gorra3.jpg",
+    img: gorra3,
   },
   {
     nombre: "Gorra Jordan Roja",
     precio: "$82.000",
     envio: "¡Envío GRATIS! FULL",
-    img: "../public/gorras/gorra4.jpg",
+    img: gorra4,
   },
-  {
-    nombre: "Gorra Vans Bordada",
-    precio: "$90.000",
-    envio: "¡Envío GRATIS!",
-    img: "../public/gorras/gorra5.jpg",
-  },
-  {
-    nombre: "Gorra Under Armour",
-    precio: "$85.000",
-    envio: "¡Envío GRATIS!",
-    img: "../public/gorras/gorra2.jpg",
-  },
-  // Puedes repetir si quieres más elementos visuales
 ];
 
 const Modulo5 = () => {
