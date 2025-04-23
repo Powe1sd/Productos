@@ -75,7 +75,7 @@ const gorras = [
   },
 ];
 
-const Modulo5 = () => {
+const Modulo6 = () => {
   return (
     <div
       style={{
@@ -161,4 +161,4 @@ const Modulo5 = () => {
   );
 };
 
-export default Modulo5;
+export default Modulo6;
