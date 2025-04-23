@@ -25,6 +25,17 @@ const gorras = [
 ];
 
 const Modulo5 = () => {
+  const cantidadGorrasUnicas = gorras.length;
+  const anchoGorra = 200;
+  const espacioEntreGorras = 20;
+  const tiempoPorGorra = 2; // Tiempo en segundos que tarda en pasar una gorra
+  const tiempoAnimacion = tiempoPorGorra * cantidadGorrasUnicas; // Tiempo total de la animación
+
+  // Ancho total de la lista duplicada (para asegurar el bucle)
+  const anchoTotalListaDuplicada =
+    (anchoGorra + espacioEntreGorras) * cantidadGorrasUnicas * 2 -
+    espacioEntreGorras;
+
   return (
     <div
       style={{
@@ -52,10 +63,10 @@ const Modulo5 = () => {
       <div
         style={{
           display: "flex",
-          animation: "scrollGorras 40s linear infinite",
-          gap: "20px",
+          animation: `scrollGorras ${tiempoAnimacion}s linear infinite`,
+          gap: `${espacioEntreGorras}px`,
           padding: "15px",
-          width: "max-content",
+          width: `${anchoTotalListaDuplicada}px`,
         }}
       >
         {gorras.concat(gorras).map((gorra, index) => (
@@ -63,7 +74,7 @@ const Modulo5 = () => {
             key={index}
             style={{
               flexShrink: 0,
-              width: "200px",
+              width: `${anchoGorra}px`,
               backgroundColor: "#fff",
               borderRadius: "8px",
               boxShadow: "0 2px 4px rgba(0, 0, 0, 0.15)",
@@ -122,7 +133,9 @@ const Modulo5 = () => {
         {`
           @keyframes scrollGorras {
             0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            100% { transform: translateX(calc(-${
+              anchoGorra + espacioEntreGorras
+            }px * ${cantidadGorrasUnicas})); }
           }
         `}
       </style>

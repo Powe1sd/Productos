@@ -248,11 +248,11 @@ const Modulo6 = () => {
         ¡Nuevas Gorras para Ti!
       </h2>
 
-      <div // Modificamos el estilo de este div para usar Grid
+      <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", // Crea columnas de al menos 200px de ancho, hasta llenar el espacio disponible
-          gap: "20px", // Espacio entre las celdas de la cuadrícula
+          gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+          gap: "20px",
         }}
       >
         {gorras.map((gorra, index) => (
@@ -260,15 +260,39 @@ const Modulo6 = () => {
             key={index}
             style={{
               backgroundColor: "#fff",
-              borderRadius: "8px",
-              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.15)",
+              borderRadius: "12px",
+              boxShadow: "0 6px 12px rgba(0, 0, 0, 0.1)",
               padding: "15px",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
               textAlign: "center",
+              transition:
+                "transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, border 0.2s ease-in-out",
+              border: "2px solid #007bff", // Borde azul (Opción 1)
+              // backgroundImage: `linear-gradient(to right, #ff8a00, #e52e71)`, // Degradado naranja a rosa (Opción 2)
+              // mask: `linear-gradient(#fff 0%, #fff 100%) content-box, linear-gradient(#fff 0%, #fff 100%)`,
+              // maskComposite: "exclude",
+              // boxShadow: "inset 0 0 0 2px #6c757d, 0 6px 12px rgba(0, 0, 0, 0.1)", // Borde gris interior (Opción 3)
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "scale(1.05)";
+              e.currentTarget.style.boxShadow = "0 8px 16px rgba(0, 0, 0, 0.2)";
+              e.currentTarget.style.border = "2px solid #28a745"; // Cambia a borde verde al pasar el mouse (Opción 1)
+              // e.currentTarget.style.padding = "13px"; // Ajuste para el borde degradado (Opción 2)
+              // e.currentTarget.style.boxShadow = "inset 0 0 0 3px #dc3545, 0 8px 16px rgba(0, 0, 0, 0.2)"; // Cambia a borde rojo al pasar el mouse (Opción 3)
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "scale(1)";
+              e.currentTarget.style.boxShadow = "0 6px 12px rgba(0, 0, 0, 0.1)";
+              e.currentTarget.style.border = "2px solid #007bff"; // Vuelve al borde azul (Opción 1)
+              // e.currentTarget.style.padding = "15px"; // Vuelve al padding original (Opción 2)
+              // e.currentTarget.style.boxShadow = "inset 0 0 0 2px #6c757d, 0 6px 12px rgba(0, 0, 0, 0.1)"; // Vuelve al borde gris (Opción 3)
             }}
           >
+            {/* Contenedor interno para la Opción 2 (Borde con degradado) */}
+            {/* {e.currentTarget.style.backgroundImage && (
+              <div style={{ padding: "15px", borderRadius: "10px", backgroundColor: "#fff" }}> */}
             <img
               src={gorra.img}
               alt={gorra.nombre}
@@ -279,7 +303,7 @@ const Modulo6 = () => {
                 maxHeight: "150px",
                 objectFit: "contain",
                 marginBottom: "10px",
-                borderRadius: "6px",
+                borderRadius: "8px",
               }}
             />
             <h3 style={{ fontSize: "1rem", fontWeight: "bold", color: "#555" }}>
@@ -295,14 +319,37 @@ const Modulo6 = () => {
               {gorra.precio}
             </p>
             <p
-              style={{
-                fontSize: "0.9rem",
-                color: "green",
-                fontWeight: "bold",
-              }}
+              style={{ fontSize: "0.9rem", color: "green", fontWeight: "bold" }}
             >
               {gorra.envio}
             </p>
+            {/* </div>
+            )}
+            {!e.currentTarget.style.backgroundImage && ( */}
+            {/* Contenido normal para las otras opciones */}
+            {/* <img
+                src={gorra.img}
+                alt={gorra.nombre}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  maxWidth: "150px",
+                  maxHeight: "150px",
+                  objectFit: "contain",
+                  marginBottom: "10px",
+                  borderRadius: "8px",
+                }}
+              />
+              <h3 style={{ fontSize: "1rem", fontWeight: "bold", color: "#555" }}>
+                {gorra.nombre}
+              </h3>
+              <p style={{ fontSize: "1.2rem", fontWeight: "bold", color: "#e44d26" }}>
+                {gorra.precio}
+              </p>
+              <p style={{ fontSize: "0.9rem", color: "green", fontWeight: "bold" }}>
+                {gorra.envio}
+              </p> */}
+            {/* )} */}
           </div>
         ))}
       </div>
