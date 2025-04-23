@@ -5,7 +5,7 @@ const gorras = [
     nombre: "Gorra Nike Negra",
     precio: "$28.000",
     envio: "¡Envío GRATIS!",
-    img: "../public/gorras/gorra1.jpg",
+    img: "../public/gorra1.jpg",
   },
   {
     nombre: "Gorra Adidas Blanca",
