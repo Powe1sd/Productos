@@ -3,6 +3,7 @@ import MeliNavbar from "./modules/NavBar";
 import Seccion3 from "./modules/Seccion3";
 import Modulo5 from "./modules/Modulo5";
 import Modulo6 from "./modules/modulo6";
+
 function App() {
   return (
     <div>
